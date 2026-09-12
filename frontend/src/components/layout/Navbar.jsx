@@ -19,28 +19,30 @@ export const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2.5 group">
-          <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-amber-500 to-yellow-300 border border-yellow-200 flex items-center justify-center shadow-md shadow-amber-500/30 group-hover:scale-105 transition-transform text-lg">
-            ⚔️
+          <div className="w-9 h-9 rounded-lg bg-gradient-to-tr from-indigo-600 to-purple-500 flex items-center justify-center shadow-md shadow-indigo-500/20 group-hover:scale-105 transition-transform">
+            <Layers className="w-5 h-5 text-white" />
           </div>
-          <div className="flex flex-col">
-            <span className="font-black text-lg tracking-tight bg-gradient-to-r from-amber-300 via-yellow-200 to-amber-400 bg-clip-text text-transparent leading-none">
-              Life RPG
-            </span>
-            <span className="text-[10px] font-black text-amber-500/90 tracking-widest uppercase mt-0.5">
-              Productivity Realm
-            </span>
-          </div>
+          <span className="font-bold text-lg tracking-tight bg-gradient-to-r from-white via-slate-200 to-slate-400 bg-clip-text text-transparent">
+            Tech Zephyr
+          </span>
         </Link>
 
         {/* Desktop Navigation Links */}
-        <nav className="hidden md:flex items-center gap-8 text-sm font-black text-slate-300">
-          <Link to="/" className="text-amber-300 hover:text-yellow-200 transition-colors flex items-center gap-1.5">
-            🏰 Village Base
+        <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+          <Link to="/" className="hover:text-indigo-400 transition-colors">
+            Home
           </Link>
-          <span className="text-slate-600">•</span>
-          <span className="text-slate-400 text-xs font-semibold">
-            Candy Crush Path & Clash of Clans Visual Identity
-          </span>
+          <a href="#features" className="hover:text-indigo-400 transition-colors">
+            Architecture
+          </a>
+          <a
+            href="https://github.com"
+            target="_blank"
+            rel="noreferrer"
+            className="hover:text-indigo-400 transition-colors"
+          >
+            Docs
+          </a>
         </nav>
 
         {/* Action Buttons */}
