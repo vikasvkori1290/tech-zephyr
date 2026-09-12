@@ -1,5 +1,92 @@
 @import "tailwindcss";
 
+.font-clash {
+  font-family: 'Lilita One', cursive, sans-serif;
+  letter-spacing: 0.03em;
+}
+
+.font-sans-body {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+@keyframes stampBounce {
+  0% { transform: scale(0.65) rotate(-12deg); opacity: 0.7; }
+  50% { transform: scale(1.28) rotate(6deg); opacity: 1; }
+  80% { transform: scale(0.94) rotate(-2deg); }
+  100% { transform: scale(1) rotate(0deg); }
+}
+
+@keyframes floatReward {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 0) scale(0.7);
+  }
+  20% {
+    opacity: 1;
+    transform: translate(-50%, -10px) scale(1.15);
+  }
+  75% {
+    opacity: 1;
+    transform: translate(-50%, -32px) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50px) scale(0.85);
+  }
+}
+
+@keyframes cardFlash {
+  0% { box-shadow: 0 0 0 0 rgba(251, 191, 36, 0.9), 0 5px 0 #4a3420; }
+  35% { box-shadow: 0 0 28px 8px rgba(251, 191, 36, 0.7), 0 5px 0 #4a3420; }
+  100% { box-shadow: 0 0 0 0 rgba(251, 191, 36, 0), 0 5px 0 #4a3420; }
+}
+
+@keyframes modalPop {
+  0% { transform: scale(0.75); opacity: 0; }
+  65% { transform: scale(1.06); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes sparkleTwinkle {
+  0% { transform: scale(0) rotate(0deg); opacity: 0; }
+  50% { transform: scale(1.2) rotate(90deg); opacity: 1; }
+  100% { transform: scale(0) rotate(180deg); opacity: 0; }
+}
+
+@keyframes rayRotate {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@keyframes particleBurst {
+  0% { transform: translate(0, 0) scale(1); opacity: 1; }
+  100% { transform: translate(var(--tw-translate-x), var(--tw-translate-y)) scale(0.2); opacity: 0; }
+}
+
+.animate-stamp-bounce {
+  animation: stampBounce 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.animate-float-reward {
+  animation: floatReward 0.85s ease-out forwards;
+}
+
+.animate-card-flash {
+  animation: cardFlash 0.55s ease-out forwards;
+}
+
+.animate-modal-pop {
+  animation: modalPop 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.animate-sparkle-twinkle {
+  animation: sparkleTwinkle 2s ease-in-out infinite;
+}
+
+.animate-ray-rotate {
+  animation: rayRotate 24s linear infinite;
+}
+
 @layer base {
   * {
     border-color: rgba(255, 255, 255, 0.1);

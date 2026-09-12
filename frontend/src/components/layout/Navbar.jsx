@@ -28,21 +28,20 @@ export const Navbar = () => {
         </Link>
 
         {/* Desktop Navigation Links */}
-        <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
-          <Link to="/" className="hover:text-indigo-400 transition-colors">
+        <nav className="hidden md:flex items-center gap-7 text-sm font-medium text-slate-300">
+          <Link to="/" className="hover:text-amber-400 transition-colors">
             Home
           </Link>
-          <a href="#features" className="hover:text-indigo-400 transition-colors">
-            Architecture
-          </a>
-          <a
-            href="https://github.com"
-            target="_blank"
-            rel="noreferrer"
-            className="hover:text-indigo-400 transition-colors"
-          >
-            Docs
-          </a>
+          <Link to="/quests" className="flex items-center gap-1.5 text-amber-400 font-bold hover:text-amber-300 transition-colors">
+            <span className="w-2 h-2 rounded-full bg-amber-400 animate-ping"></span>
+            Quests Board
+          </Link>
+          <Link to="/character" className="flex items-center gap-1 text-slate-300 font-semibold hover:text-amber-400 transition-colors">
+            Character Sheet
+          </Link>
+          <Link to="/streak" className="flex items-center gap-1 text-orange-400 font-bold hover:text-orange-300 transition-colors">
+            🔥 Streak Trail
+          </Link>
         </nav>
 
         {/* Action Buttons */}
